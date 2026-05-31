@@ -826,6 +826,7 @@ h3 {
 
 .project-video {
   display: block;
+  aspect-ratio: 16 / 9;
 }
 
 .project-placeholder {
