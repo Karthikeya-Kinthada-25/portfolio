@@ -18,7 +18,7 @@ const projects = [
     detail:
       'Jarvis is a desktop automation assistant that handles voice commands, web actions, and intelligent task execution through local workflows.',
     stack: ['Python', 'Speech Recognition', 'Automation'],
-    video: '/videos/jarvis.mp4',
+    video: 'https://www.youtube.com/embed/Zybdf6gvIas',
     github: 'https://github.com/Karthikeya-Kinthada-25/jarvis-ai-assistant',
     linkedin:
       'https://www.linkedin.com/posts/karthikeya-kinthada-4869a72bb_ai-automation-python-activity-7466577887681236992-pcI3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEza9-YBof2V70XQTp6Q9Rrto10ZOkNQ64w',
@@ -457,14 +457,25 @@ function App() {
               </ul>
             </div>
 
-            {activeProject.video ? (
-              <video
-                className="project-video"
-                src={activeProject.video}
-                controls
-                playsInline
-              />
-            ) : (
+           {activeProject.video ? (
+  activeProject.video.includes("youtube") ? (
+    <iframe
+      className="project-video"
+      src={activeProject.video}
+      title="Project Demo"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  ) : (
+    <video
+      className="project-video"
+      src={activeProject.video}
+      controls
+      playsInline
+    />
+  )
+) : (
               <div className="project-placeholder">
                 <span>Technical notebook available below</span>
               </div>
