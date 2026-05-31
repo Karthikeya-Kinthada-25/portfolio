@@ -207,7 +207,7 @@ function App() {
             <a className="button primary shine" href="#work">
               View Projects
             </a>
-            <a className="button ghost shine" href="/resume.pdf" download>
+            <a className="button ghost shine" href="/Karthikeya-Kinthada-Resume.pdf" download>
               Download Resume
             </a>
           </div>
