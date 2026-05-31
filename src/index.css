@@ -1,0 +1,85 @@
+:root {
+  --paper: #f8f7fb;
+  --surface: #ffffff;
+  --panel: rgba(255, 255, 255, 0.74);
+  --panel-strong: rgba(255, 255, 255, 0.86);
+  --ink: #15131d;
+  --muted: #686174;
+  --faint: #958da3;
+  --line: rgba(33, 27, 45, 0.13);
+  --accent: #7c3aed;
+  --accent-2: #315d54;
+  --violet: #7c3aed;
+  --glow-rgb: 139, 92, 246;
+  --shine-rgb: 196, 181, 253;
+  --nav-bg: rgba(255, 255, 255, 0.68);
+  --primary-gradient: linear-gradient(135deg, #1f1638, #7c3aed);
+  --modal-gradient: linear-gradient(135deg, rgba(23, 18, 35, 0.96), rgba(12, 12, 18, 0.96));
+  --green: #3f7d5b;
+  --shadow-soft: 0 16px 48px rgba(32, 24, 51, 0.08);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='dark'] {
+  --paper: #0d0d11;
+  --surface: #15141a;
+  --panel: rgba(22, 20, 27, 0.78);
+  --panel-strong: rgba(27, 24, 32, 0.9);
+  --ink: #f7f2f2;
+  --muted: #b6adb1;
+  --faint: #81777e;
+  --line: rgba(255, 230, 230, 0.13);
+  --accent: #ef4444;
+  --accent-2: #f97373;
+  --violet: #ef4444;
+  --glow-rgb: 239, 68, 68;
+  --shine-rgb: 252, 165, 165;
+  --nav-bg: rgba(18, 16, 20, 0.72);
+  --primary-gradient: linear-gradient(135deg, #2a1114, #ef4444);
+  --modal-gradient: linear-gradient(135deg, rgba(33, 12, 15, 0.97), rgba(11, 11, 13, 0.97));
+  --green: #4ade80;
+  --shadow-soft: 0 18px 56px rgba(0, 0, 0, 0.28);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--paper);
+  transition:
+    background 260ms ease,
+    color 260ms ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: var(--paper);
+  background: var(--accent-2);
+}
