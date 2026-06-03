@@ -200,7 +200,7 @@ function App() {
           <p className="eyebrow">Portfolio / 2026</p>
           <h1>Karthikeya Kinthada</h1>
           <p className="intro">
-            Computer Science and Engineering student at MVGR COLLEGE OF ENGINEERNG
+            Computer Science and Engineering student at MVGR COLLEGE OF ENGINEERING
           </p>
 
           <div className="hero-actions" aria-label="Primary actions">
