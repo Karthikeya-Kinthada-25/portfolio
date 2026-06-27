@@ -46,7 +46,7 @@ const projects = [
     detail:
       'Resume-Analyzer is a full-stack Flask and JavaScript project that extracts resume text, compares it with target roles and job descriptions, calculates score breakdowns, highlights missing skills, checks ATS signals, and generates stronger resume bullet suggestions with a clean animated dashboard.',
     stack: ['Python', 'Flask', 'JavaScript', 'ATS Analysis'],
-    video: '/videos/resume-analyzer.mp4',
+    youtubeEmbed: 'https://youtu.be/ildyu_ZZtSw?si=fhenqIDiF0ciNmTl',
     github: 'https://github.com/Karthikeya-Kinthada-25/resume-analyzer',
     linkedin:
       'https://www.linkedin.com/posts/karthikeya-kinthada-4869a72bb_webdevelopment-python-flask-ugcPost-7476570785139257344-qgBl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEza9-YBof2V70XQTp6Q9Rrto10ZOkNQ64w',
