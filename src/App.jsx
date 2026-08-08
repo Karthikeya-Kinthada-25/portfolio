@@ -37,20 +37,6 @@ const projects = [
     linkedin:
       'https://www.linkedin.com/posts/karthikeya-kinthada-4869a72bb_ai-edtech-userexperience-activity-7466569887709102081-sGay?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEza9-YBof2V70XQTp6Q9Rrto10ZOkNQ64w',
   },
-  {
-    name: 'Resume-Analyzer',
-    type: 'AI-Style Web App',
-    year: '2026',
-    description:
-      'Resume analysis dashboard for scoring resumes, finding skill gaps, checking ATS readiness, and improving bullets.',
-    detail:
-      'Resume-Analyzer is a full-stack Flask and JavaScript project that extracts resume text, compares it with target roles and job descriptions, calculates score breakdowns, highlights missing skills, checks ATS signals, and generates stronger resume bullet suggestions with a clean animated dashboard.',
-    stack: ['Python', 'Flask', 'JavaScript', 'ATS Analysis'],
-    youtubeEmbed: 'https://www.youtube.com/embed/ildyu_ZZtSw?si=qEhV2J_qycjf9hBl',
-    github: 'https://github.com/Karthikeya-Kinthada-25/resume-analyzer',
-    linkedin:
-      'https://www.linkedin.com/posts/karthikeya-kinthada-4869a72bb_webdevelopment-python-flask-ugcPost-7476570785139257344-qgBl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEza9-YBof2V70XQTp6Q9Rrto10ZOkNQ64w',
-  },
 ]
 
 const skills = [
@@ -70,14 +56,24 @@ const experience = [
 
 const internships = [
   {
+    title: 'Python Full Stack Internship',
+    organization: 'EduSkills Academy',
+    period: '8-week program / Jul 2026',
+    priority: 'Top priority',
+    description:
+      'Completed an 8-week Python Full Stack internship covering HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, SQL, and Git.',
+    image: '/certificates/eduskills-python-full-stack-internship.png',
+    note: 'Strong internship credential because it shows full-stack web development practice.',
+  },
+  {
     title: 'Artificial Intelligence Internship',
     organization: 'EdiGlobe',
     period: 'Jul 2025 - Sep 2025',
-    priority: 'Top priority',
+    priority: 'High priority',
     description:
       'Completed an AI internship focused on problem-solving, communication, and practical project work.',
     image: '/certificates/ediglobe-internship.png',
-    note: 'Place this first because it is direct internship experience, not only a course certificate.',
+    note: 'Direct internship experience in Artificial Intelligence.',
   },
 ]
 
@@ -171,6 +167,7 @@ function App() {
         <a className="brand magnetic" href="#top" aria-label="Karthikeya home">
           K
         </a>
+
         <div className={`nav-actions ${isMobileMenuOpen ? 'is-open' : ''}`}>
           <button
             className="menu-toggle shine"
@@ -181,23 +178,15 @@ function App() {
           >
             Menu
           </button>
+
           <div className="nav-links" id="site-navigation">
-            <a href="#work" onClick={closeMobileMenu}>
-              Projects
-            </a>
-            <a href="#internships" onClick={closeMobileMenu}>
-              Internships
-            </a>
-            <a href="#certifications" onClick={closeMobileMenu}>
-              Certifications
-            </a>
-            <a href="#about" onClick={closeMobileMenu}>
-              About
-            </a>
-            <a href="#contact" onClick={closeMobileMenu}>
-              Contact
-            </a>
+            <a href="#work" onClick={closeMobileMenu}>Projects</a>
+            <a href="#internships" onClick={closeMobileMenu}>Internships</a>
+            <a href="#certifications" onClick={closeMobileMenu}>Certifications</a>
+            <a href="#about" onClick={closeMobileMenu}>About</a>
+            <a href="#contact" onClick={closeMobileMenu}>Contact</a>
           </div>
+
           <button
             className="theme-toggle shine"
             type="button"
@@ -214,14 +203,14 @@ function App() {
           <p className="eyebrow">Portfolio / 2026</p>
           <h1>Karthikeya Kinthada</h1>
           <p className="intro">
-            Computer Science and Engineering student at MVGR COLLEGE OF ENGINEERNG
+            Computer Science and Engineering student at MVGR College of Engineering.
           </p>
 
           <div className="hero-actions" aria-label="Primary actions">
             <a className="button primary shine" href="#work">
               View Projects
             </a>
-            <a className="button ghost shine" href="/Karthikeya-Kinthada-Resume.pdf" download>
+            <a className="button ghost shine" href="/resume.pdf" download>
               Download Resume
             </a>
           </div>
@@ -258,10 +247,7 @@ function App() {
 
         <div className="project-list">
           {projects.map((project) => (
-            <article
-              className="project-card glow-card"
-              key={project.name}
-            >
+            <article className="project-card glow-card" key={project.name}>
               <div className="project-meta">
                 <span>{project.type}</span>
                 <span>{project.year}</span>
@@ -296,10 +282,7 @@ function App() {
 
         <div className="credential-list featured-credentials">
           {internships.map((item) => (
-            <article
-              className="credential-card glow-card"
-              key={item.title}
-            >
+            <article className="credential-card glow-card" key={item.title}>
               <button
                 className="credential-preview"
                 type="button"
@@ -308,6 +291,7 @@ function App() {
               >
                 <img src={item.image} alt={`${item.title} certificate`} />
               </button>
+
               <div className="credential-copy">
                 <div className="project-meta">
                   <span>{item.organization}</span>
@@ -331,10 +315,7 @@ function App() {
 
         <div className="credential-list">
           {certifications.map((item) => (
-            <article
-              className="credential-card compact glow-card"
-              key={item.title}
-            >
+            <article className="credential-card compact glow-card" key={item.title}>
               <button
                 className="credential-preview"
                 type="button"
@@ -343,6 +324,7 @@ function App() {
               >
                 <img src={item.image} alt={`${item.title} certificate`} />
               </button>
+
               <div className="credential-copy">
                 <div className="project-meta">
                   <span>{item.organization}</span>
@@ -366,9 +348,7 @@ function App() {
 
         <div className="skill-grid">
           {skills.map((skill) => (
-            <span className="glow-card" key={skill}>
-              {skill}
-            </span>
+            <span className="glow-card" key={skill}>{skill}</span>
           ))}
         </div>
       </section>
@@ -393,6 +373,7 @@ function App() {
         <div>
           <p className="section-kicker">Contact</p>
           <h2>Let's build something meaningful.</h2>
+
           <div className="site-note">
             <p>Built with a simple idea: clarity first, motion second.</p>
             <button
@@ -404,6 +385,7 @@ function App() {
             </button>
           </div>
         </div>
+
         <div className="footer-links" aria-label="Contact links">
           <a className="icon-link" href={profileLinks.email} aria-label="Email">
             <svg aria-hidden="true" focusable="false">
@@ -411,6 +393,7 @@ function App() {
             </svg>
             <span className="sr-only">Email</span>
           </a>
+
           <a
             className="icon-link"
             href={profileLinks.github}
@@ -423,6 +406,7 @@ function App() {
             </svg>
             <span className="sr-only">GitHub</span>
           </a>
+
           <a
             className="icon-link"
             href={profileLinks.linkedin}
@@ -479,25 +463,16 @@ function App() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
-            ) : activeProject.video ? (
+            ) : (
               <video
                 className="project-video"
                 src={activeProject.video}
                 controls
                 playsInline
               />
-            ) : (
-              <div className="project-placeholder">
-                <span>Technical notebook available below</span>
-              </div>
             )}
 
             <div className="modal-links">
-              {activeProject.report && (
-                <a href={activeProject.report} target="_blank" rel="noreferrer">
-                  Open technical notebook
-                </a>
-              )}
               <a href={activeProject.github} target="_blank" rel="noreferrer">
                 GitHub
               </a>
